@@ -1,35 +1,63 @@
 import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {theme} from "../../../styles/Theme";
+import {Container} from "../../../components/Container";
+import {SectionTitle} from "../../../components/SectionTitle";
 import {Post} from "./post/Post";
-import {SectionTitle} from "../../../components/smallcomponents/SectionTitle";
+
+
 
 export const Posts = () => {
     return (
             <StyledPosts>
-                <SectionTitle>Recent Posts</SectionTitle>
-                <a href="#">View all</a>
-                <FlexWrapper>
-                    <Post titleText={'Making a design system from scratch'}
-                          timeText={'12 feb 2020'}
-                          spanText={'Design, Pattern'}
-                          paragraphText={'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'}
-                    />
-                    <Post titleText={'Creating pixel perfect icons in Figma'}
-                          timeText={'10 feb 2020'}
-                          spanText={'Figma, Icon Design'}
-                          paragraphText={'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'}
-                    />
-                </FlexWrapper>
+                <Container>
+                    <SectionTitle padding={'25px 0 22px 0'}>Recent Posts</SectionTitle>
+                    <a href="#">View all</a>
+                    <FlexWrapper justify={'center'} gap={'20px'} align={'flex-start'}>
+                        <Post title={'Making a design system from scratch'}
+                              data={'12 Feb 2020'}
+                              spanText={'Design, Pattern'}
+                              paragraphText={'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'}
+                        />
+                        <Post title={'Creating pixel perfect icons in Figma'}
+                              data={'10 Feb 2020'}
+                              spanText={'Figma, Icon Design'}
+                              paragraphText={'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'}
+                        />
+                    </FlexWrapper>
+                </Container>
             </StyledPosts>
     );
 
 };
 
 const StyledPosts = styled.section`
-    background-color: #f3c46d;
-    min-height: 50vh;
+    background-color: ${theme.colors.secondaryColor};
+    display: flex;
+    position: relative;
+
+    a {
+        position: absolute;
+        right: 15px;
+        top: 27px;
+        color: #00A8CC;
+        font: 16px 'Heebo Regular', sans-serif;
+        z-index: 99999;
+        text-decoration: none;
+
+        &:hover {
+            color: #147083;
+        }
+    }
+
 `
+
+
+
+
+
+
 
 
 

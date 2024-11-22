@@ -1,21 +1,25 @@
 import React from 'react';
 import styled from "styled-components";
-import {Logo} from "../../components/logo/Logo";
-import {Menu} from "../../components/menu/Menu";
+import {HeaderMenu} from "./headerMenu/HeaderMenu";
 
-const items = ['Blog', 'Works', 'Contact']
+
+const items = ['Posts', 'Works', 'Contact']
 
 export const Header = () => {
     return (
             <StyledHeader>
-                <Logo/>
-                <Menu menuItems={items}/>
+                <HeaderMenu menuItems={items}/>
             </StyledHeader>
     );
 };
 
 const StyledHeader = styled.header`
-    background-color:#EDF7FA;
-    display: flex;
-    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
 `
+
+
+

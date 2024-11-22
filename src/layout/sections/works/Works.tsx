@@ -1,18 +1,21 @@
 import React from 'react';
 import styled from "styled-components";
-import {SectionTitle} from "../../../components/smallcomponents/SectionTitle";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Work} from "./work/Work";
 import projectImg1 from './../../../assets/img/proj-1.webp'
 import projectImg2 from './../../../assets/img/proj-2.webp'
 import projectImg3 from './../../../assets/img/proj-3.webp'
+import {SectionTitle} from "../../../components/SectionTitle";
+import {Container} from "../../../components/Container";
 
 
 export const Works = () => {
     return (
             <StyledWorks>
-                <SectionTitle>Featured works</SectionTitle>
-                <FlexWrapper direction={'column'} justify={'space-around'}>
+                <Container>
+                <SectionTitle padding={'50px 0 30px 0'}>Featured works</SectionTitle>
+                <FlexWrapper direction={'column'} >
+
                     <Work src={projectImg1}
                           titleText={'Designing Dashboards'}
                           timeText={'2020'}
@@ -34,13 +37,30 @@ export const Works = () => {
 
 
                 </FlexWrapper>
+
+                </Container>
             </StyledWorks>
     );
 };
 
 const StyledWorks = styled.section`
-    background-color: lightgreen;
-    min-height: 50vh;
-    
+        div {
+            outline: 1px solid blue;
+        }
 `
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
