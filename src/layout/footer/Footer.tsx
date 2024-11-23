@@ -6,7 +6,7 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 export const Footer = () => {
     return (
             <StyledFooter>
-                <FlexWrapper direction={'column'} align={'center'} justify={'center'}>
+                <FlexWrapper direction={'column'} align={'center'} justify={'center'} height={'100%'}>
                     <SocialList>
                         <SocialItem>
                             <SocialLink>
@@ -46,7 +46,6 @@ const StyledFooter = styled.footer`
 const SocialList = styled.ul`
     display: flex;
     gap: 34px;
-}
 `
 
 const SocialItem = styled.li`
@@ -65,7 +64,7 @@ const SocialLink = styled.a`
 `
 
 const Copyright = styled.small`
-    margin-top: 25px;
+    margin-top: 20px;
     font: 14px 'Heebo Regular', sans-serif;
 `
 

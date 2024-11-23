@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Paragraph} from "../../../../components/Paragraph";
 import {InnerTitle} from "../../../../components/InnerTitle";
+import {theme} from "../../../../styles/Theme";
 
 
 type WorkProps = {
@@ -17,10 +18,12 @@ export const Work = (props: WorkProps) => {
     return (
             <StyledWork>
                 <Image src={props.src} alt=""/>
-                <InnerTitle font={"30px"}>{props.titleText}</InnerTitle>
+                <div>
+                <InnerTitle font={"30px"} padding={'0 0 20px 0'}>{props.titleText}</InnerTitle>
                 <StyledTime>{props.timeText}</StyledTime>
                 <StyledSpan>{props.spanText}</StyledSpan>
-                <Paragraph>{props.paragraphText}</Paragraph>
+                <Paragraph padding={'0 30px 0 0'}>{props.paragraphText}</Paragraph>
+                </div>
             </StyledWork>
     );
 };
@@ -30,6 +33,11 @@ const StyledWork = styled.article`
     display: flex;
     padding-bottom: 30px;
     padding-top: 25px;
+    
+    div {
+        margin-left: 18px;
+        margin-top: -10px;
+    }
 `
 
 const Image = styled.img`
@@ -49,12 +57,12 @@ const StyledTime = styled.time`
     border-radius: 16px;
     padding: 3px;
     padding-left: 11px;
-    margin-right: 22px;
+    margin-right: 28px;
     margin-bottom: 22px;
 `
 
 const StyledSpan = styled.span`
     font: 20px 'Heebo Regular', sans-serif;
-    color: #8695A4;
+    color: ${theme.colors.tagColor};
 `
 

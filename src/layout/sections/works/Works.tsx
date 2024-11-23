@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Work} from "./work/Work";
 import projectImg1 from './../../../assets/img/proj-1.webp'
 import projectImg2 from './../../../assets/img/proj-2.webp'
@@ -13,8 +12,7 @@ export const Works = () => {
     return (
             <StyledWorks>
                 <Container>
-                <SectionTitle padding={'50px 0 30px 0'}>Featured works</SectionTitle>
-                <FlexWrapper direction={'column'} >
+                <SectionTitle padding={'35px 0 10px 0'}>Featured works</SectionTitle>
 
                     <Work src={projectImg1}
                           titleText={'Designing Dashboards'}
@@ -36,7 +34,6 @@ export const Works = () => {
                     />
 
 
-                </FlexWrapper>
 
                 </Container>
             </StyledWorks>
@@ -44,9 +41,7 @@ export const Works = () => {
 };
 
 const StyledWorks = styled.section`
-        div {
-            outline: 1px solid blue;
-        }
+
 `
 
 

@@ -12,9 +12,9 @@ export const Posts = () => {
     return (
             <StyledPosts>
                 <Container>
-                    <SectionTitle padding={'25px 0 22px 0'}>Recent Posts</SectionTitle>
+                    <SectionTitle padding={'25px 0 20px 0'}>Recent posts</SectionTitle>
                     <a href="#">View all</a>
-                    <FlexWrapper justify={'center'} gap={'20px'} align={'flex-start'}>
+                    <FlexWrapper justify={'center'} gap={'20px'}>
                         <Post title={'Making a design system from scratch'}
                               data={'12 Feb 2020'}
                               spanText={'Design, Pattern'}

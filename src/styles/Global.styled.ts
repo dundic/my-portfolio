@@ -18,10 +18,11 @@ export const GlobalStyle = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
         color: ${theme.colors.fontColor};
         background-color: ${theme.colors.bgColor};
+        line-height: 1.5;
     }
     
     a {
-        text-decoration: none;
+        text-decoration: none;      
     }
     
     ul {

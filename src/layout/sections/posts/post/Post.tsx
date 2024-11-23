@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Paragraph} from "../../../../components/Paragraph";
 import {InnerTitle} from "../../../../components/InnerTitle";
+import {theme} from "../../../../styles/Theme";
 
 type PostProps = {
     title: string
@@ -16,7 +17,7 @@ export const Post = (props: PostProps) => {
                 <InnerTitle font={'26px'} padding={'0 0 30px 0'}>{props.title}</InnerTitle>
                 <Timer>{props.data}</Timer>
                 <SpanElem>{props.spanText}</SpanElem>
-                <Paragraph padding={'0 0 20px 0'} margin={'25px 0 0 0'}>{props.paragraphText}</Paragraph>
+                <Paragraph margin={'20px 0 0 0'}>{props.paragraphText}</Paragraph>
             </StyledPost>
     );
 };
@@ -24,10 +25,11 @@ export const Post = (props: PostProps) => {
 const StyledPost = styled.article`
     min-height: 295px;
     max-width: 418px;
+    border-radius: 4px;
     width: 100%;
-    background-color: #fff;
-    margin-bottom: 32px;
-    padding: 23px 24px 7px 21px;
+    background-color: ${theme.colors.bgColor};
+    margin-bottom: 30px;
+    padding: 23px 24px 24px 23px;
 `
 const Timer  = styled.time`
     font: 18px 'Heebo Regular', sans-serif;
@@ -38,7 +40,7 @@ const Timer  = styled.time`
         content: '';
         width: 2px;
         height: 100%;
-        background-color: #21243D;;
+        background-color: ${theme.colors.fontColor};
         position: absolute;
         left: 125px;
     }

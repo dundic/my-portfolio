@@ -4,16 +4,13 @@ import photo from '../../../assets/img/photo.webp'
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Paragraph} from "../../../components/Paragraph";
 import {Container} from "../../../components/Container";
-import '../../../styles/styles.css';
 import {theme} from "../../../styles/Theme";
-
-
 
 export const Main = () => {
     return (
             <StyledMain>
                 <Container>
-                    <FlexWrapper align={'center'} justify={'center'}>
+                    <FlexWrapper align={'center'} justify={'center'} height={'100%'}>
                         <div>
                             <Name>Hi, I am Alexei</Name>
                             <MainTitle>A Web Developer.</MainTitle>
@@ -41,7 +38,7 @@ const StyledMain = styled.main`
         min-width: 208px;
         height: 47px;
         padding: 0 20px 0;
-        background-color: #FF6464;
+        background-color: ${theme.colors.accentColor};
         color: #fff;
         border: none;
         font: 20px 'Heebo Medium', sans-serif;
@@ -63,7 +60,6 @@ const Name = styled.span`
     font-weight: 600;
     font-size: 44px;
     display: block;
-    margin-bottom: 10px;
 `
 
 const Photo = styled.img`
@@ -76,7 +72,7 @@ const Photo = styled.img`
 const PhotoWrapper = styled.div`
     position: relative;
     z-index: 1;
-    margin-top: -80px;
+    margin-top: -90px;
     
     &::after {
         content: '';
@@ -88,6 +84,6 @@ const PhotoWrapper = styled.div`
         top: 13px;
         z-index: -2;
         transform: translateX(-7px);
-        background-color: #EDF7FA;
+        background-color: ${theme.colors.secondaryColor};
     }
 `

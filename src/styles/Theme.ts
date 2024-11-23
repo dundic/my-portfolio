@@ -3,7 +3,8 @@ export const theme = {
         bgColor: '#FFF',
         fontColor: '#21243D',
         secondaryColor: '#EDF7FA',
-        spanColor: '#8695A4',
-        hoverColor: '#FF6464'
+        tagColor: '#8695A4',
+        accentColor: '#FF6464'
     }
+
 }

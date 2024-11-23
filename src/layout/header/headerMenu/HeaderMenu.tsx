@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {theme} from "../../../styles/Theme";
 
 
 export const HeaderMenu = (props: { menuItems: Array<string> }) => {
@@ -39,9 +40,7 @@ const Link = styled.a`
     color: #000;
     
     &:hover {
-        color: #FF6464;
+        color: ${theme.colors.accentColor};
     } 
-    &:active {
-        color: rgb(230, 20, 20);
-    }
+
 `

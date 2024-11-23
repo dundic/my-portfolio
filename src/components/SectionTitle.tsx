@@ -1,11 +1,8 @@
 import styled from "styled-components";
+import {theme} from "../styles/Theme";
 
-type SectionTitleProps = {
-    padding?: string
-}
-
-export const SectionTitle = styled.h2<SectionTitleProps>`
+export const SectionTitle = styled.h2<{padding?: string}>`
     font: 22px 'Heebo Regular', sans-serif;
-    color: #21243D;
+    color: ${theme.colors.fontColor};
     padding: ${props => props.padding || '0'};
 `
