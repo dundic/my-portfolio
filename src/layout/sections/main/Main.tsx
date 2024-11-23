@@ -32,12 +32,12 @@ export const Main = () => {
 
 const StyledMain = styled.main`
     min-height: 100vh;
-    display: flex;
+    display: flex;    
+   
     
     button {
         min-width: 208px;
-        height: 47px;
-        padding: 0 20px 0;
+        padding: 12px 20px 12px;
         background-color: ${theme.colors.accentColor};
         color: #fff;
         border: none;
@@ -60,6 +60,7 @@ const Name = styled.span`
     font-weight: 600;
     font-size: 44px;
     display: block;
+    padding-top: 90px;
 `
 
 const Photo = styled.img`
@@ -72,7 +73,6 @@ const Photo = styled.img`
 const PhotoWrapper = styled.div`
     position: relative;
     z-index: 1;
-    margin-top: -90px;
     
     &::after {
         content: '';

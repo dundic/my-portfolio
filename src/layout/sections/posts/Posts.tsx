@@ -36,7 +36,7 @@ const StyledPosts = styled.section`
     background-color: ${theme.colors.secondaryColor};
     display: flex;
     position: relative;
-
+//redo
     a {
         position: absolute;
         right: 15px;

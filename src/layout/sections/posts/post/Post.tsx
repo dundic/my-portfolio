@@ -49,6 +49,7 @@ const Timer  = styled.time`
 const SpanElem = styled.span`
     font: 18px 'Heebo Regular', sans-serif;
     position: relative;
+    white-space: nowrap;
 `
 
 
