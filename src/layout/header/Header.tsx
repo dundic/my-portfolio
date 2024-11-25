@@ -1,26 +1,21 @@
 import React from 'react';
-import styled from "styled-components";
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
+import {MobileMenu} from "./mobileMenu/MobileMenu";
+import {S} from './Header_Styles'
 
 
 
 const items = ['Posts', 'Works', 'Contact']
 
-export const Header = () => {
+export const Header: React.FC = () => {
     return (
-            <StyledHeader>
+            <S.Header>
                 <HeaderMenu menuItems={items}/>
-            </StyledHeader>
+                <MobileMenu menuItems={items}/>
+            </S.Header>
     );
 };
 
-const StyledHeader = styled.header`
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-`
 
 
 

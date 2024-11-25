@@ -5,6 +5,10 @@ export const theme = {
         secondaryColor: '#EDF7FA',
         tagColor: '#8695A4',
         accentColor: '#FF6464'
+    },
+
+    media: {
+        mobile: 'screen and (max-width: 576px)',
     }
 
 }

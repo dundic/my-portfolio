@@ -6,6 +6,7 @@ import projectImg2 from './../../../assets/img/proj-2.webp'
 import projectImg3 from './../../../assets/img/proj-3.webp'
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Container} from "../../../components/Container";
+import {theme} from "../../../styles/Theme";
 
 
 export const Works = () => {
@@ -41,7 +42,15 @@ export const Works = () => {
 };
 
 const StyledWorks = styled.section`
-
+   
+    
+    @media ${theme.media.mobile} {
+        ${SectionTitle} {
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom: 0;      
+        }
+    }
 `
 
 

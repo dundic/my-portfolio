@@ -19,7 +19,7 @@ export const Work = (props: WorkProps) => {
             <StyledWork>
                 <Image src={props.src} alt=""/>
                 <div>
-                <InnerTitle font={"30px"} padding={'0 0 20px 0'}>{props.titleText}</InnerTitle>
+                <InnerTitle font={'30px'} padding={'0 0 20px 0'}>{props.titleText}</InnerTitle>
                 <StyledTime>{props.timeText}</StyledTime>
                 <StyledSpan>{props.spanText}</StyledSpan>
                 <Paragraph padding={'0 30px 0 0'}>{props.paragraphText}</Paragraph>
@@ -33,11 +33,31 @@ const StyledWork = styled.article`
     display: flex;
     padding-bottom: 30px;
     padding-top: 25px;
+
+    @media ${theme.media.mobile} {
+        flex-direction: column;
+        padding-bottom: 15px;
+    }
     
+    @media ${theme.media.mobile} {
+        ${InnerTitle} {
+            padding-bottom: 10px;
+        }    
+        
+    }
+  
+        
     div {
         margin-left: 18px;
         margin-top: -10px;
+        
+        @media ${theme.media.mobile} {
+            margin: 0;
+        }
+        
+        
     }
+
 `
 
 const Image = styled.img`
@@ -45,6 +65,14 @@ const Image = styled.img`
     height: 180px;
     object-fit: cover;
     border-radius: 6px;
+    
+    @media ${theme.media.mobile} {
+        width: 100%;
+        min-height: 230px;
+        margin-bottom: 20px;
+    }
+
+ 
 `
 
 const StyledTime = styled.time`
@@ -59,10 +87,21 @@ const StyledTime = styled.time`
     padding-left: 11px;
     margin-right: 28px;
     margin-bottom: 22px;
+    
+    @media ${theme.media.mobile} {
+        font-size: 16px;
+        padding: 4px;
+        padding-left: 12px;
+    }
+    
 `
 
 const StyledSpan = styled.span`
     font: 20px 'Heebo Regular', sans-serif;
     color: ${theme.colors.tagColor};
+
+    @media ${theme.media.mobile} {
+        font-size: 16px;
+     }
 `
 

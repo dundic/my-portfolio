@@ -17,4 +17,6 @@ export const FlexWrapper = styled.div<FlexWrapperProps>`
     align-items: ${props => props.align || 'stretch'};
     flex-wrap: ${props => props.wrap || 'nowrap'};
     gap: ${props => props.gap || 0};
+    
+
 `

@@ -27,6 +27,10 @@ const StyledHeaderMenu = styled.nav`
         gap: 33px; 
         padding: 27px 60px;
     }
+    
+    @media ${theme.media.mobile} {
+        display: none;
+    }
 `
 
 const ListItem = styled.li`
