@@ -3,7 +3,6 @@ import photo from '../../../assets/img/photo.webp'
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Paragraph} from "../../../components/Paragraph";
 import {Container} from "../../../components/Container";
-
 import {S} from './Main_Styles'
 
 export const Main: React.FC = () => {

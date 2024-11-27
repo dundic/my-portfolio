@@ -9,11 +9,11 @@ import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
 
 
-export const Works = () => {
+export const Works: React.FC = () => {
     return (
             <StyledWorks>
                 <Container>
-                <SectionTitle padding={'35px 0 10px 0'}>Featured works</SectionTitle>
+                <SectionTitle margin={'30px 0 0'}>Featured works</SectionTitle>
 
                     <Work src={projectImg1}
                           titleText={'Designing Dashboards'}
@@ -34,21 +34,17 @@ export const Works = () => {
                           paragraphText={'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'}
                     />
 
-
-
                 </Container>
             </StyledWorks>
     );
 };
 
 const StyledWorks = styled.section`
-   
     
     @media ${theme.media.mobile} {
         ${SectionTitle} {
             text-align: center;
-            padding-top: 15px;
-            padding-bottom: 0;      
+            margin-top: 15px;
         }
     }
 `

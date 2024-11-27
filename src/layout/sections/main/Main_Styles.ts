@@ -10,23 +10,19 @@ const Main = styled.main`
     align-items: center;
 
     @media ${theme.media.mobile} {
-           
+
         div {
             text-align: center;
         }
 
         ${FlexWrapper} {
-            flex-wrap: wrap-reverse;
-            flex-direction: column-reverse;         
-            
+            flex-direction: column-reverse;
         }
 
         ${Paragraph} {
-            padding: 10px 15px 30px 15px;
-        }     
-
+            padding: 10px 15px 30px;
+        }
     }
-
 
     button {
         min-width: 208px;
@@ -36,37 +32,36 @@ const Main = styled.main`
         border: none;
         font: 20px 'Heebo Medium', sans-serif;
         border-radius: 2px;
-        
+
         &:hover {
             background-color: rgb(228, 75, 75);
         }
     }
-       
 `
+
 const MainTitle = styled.h1`
-    ${font({family: 'Heebo Bold, sans-serif', weight: 600,  Fmax: 44, Fmin: 32})};
-    
+    ${font({family: 'Heebo Bold, sans-serif', weight: 600, Fmax: 44, Fmin: 32})};
+
     @media ${theme.media.mobile} {
         margin-bottom: 5px;
     }
- 
+
 `
 
 const Name = styled.span`
-    ${font({family: 'Heebo Bold, sans-serif', weight: 600,  Fmax: 44, Fmin: 32})};
+    ${font({family: 'Heebo Bold, sans-serif', weight: 600, Fmax: 44, Fmin: 32})};
     display: block;
     padding-top: 90px;
-    
+
     @media ${theme.media.mobile} {
-      margin-top: 0;
+        padding-top: 30px;
     }
 `
 
 const PhotoWrapper = styled.div`
     position: relative;
     z-index: 1;
-    
-    
+
     &::after {
         content: '';
         width: 244px;
@@ -74,14 +69,14 @@ const PhotoWrapper = styled.div`
         border-radius: 50%;
         position: absolute;
         left: 2px;
-        top: 13px;
+        top: 11px;
         z-index: -2;
         transform: translateX(-7px);
         background-color: ${theme.colors.secondaryColor};
     }
 
     @media ${theme.media.mobile} {
-            
+
         &::after {
             content: '';
             width: 170px;
@@ -101,7 +96,7 @@ const Photo = styled.img`
     height: 244px;
     object-fit: cover;
     border-radius: 50%;
-    
+
     @media ${theme.media.mobile} {
         width: 170px;
         height: 170px;
@@ -113,6 +108,5 @@ export const S = {
     Name,
     MainTitle,
     Photo,
-    PhotoWrapper,
-
+    PhotoWrapper
 }

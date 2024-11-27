@@ -11,10 +11,9 @@ type WorkProps = {
     timeText: string
     spanText: string
     paragraphText: string
-
 }
 
-export const Work = (props: WorkProps) => {
+export const Work: React.FC<WorkProps> = (props) => {
     return (
             <StyledWork>
                 <Image src={props.src} alt=""/>
@@ -31,33 +30,28 @@ export const Work = (props: WorkProps) => {
 const StyledWork = styled.article`
     border-bottom: 2px solid #E0E0E0;
     display: flex;
+    margin-top: 30px;
     padding-bottom: 30px;
-    padding-top: 25px;
 
     @media ${theme.media.mobile} {
         flex-direction: column;
         padding-bottom: 15px;
-    }
-    
-    @media ${theme.media.mobile} {
+        margin-top: 15px;
+
         ${InnerTitle} {
             padding-bottom: 10px;
-        }    
-        
-    }
-  
-        
-    div {
-        margin-left: 18px;
-        margin-top: -10px;
-        
-        @media ${theme.media.mobile} {
-            margin: 0;
         }
-        
-        
     }
+}
 
+div {
+    margin-left: 18px;
+    margin-top: -10px;
+
+    @media ${theme.media.mobile} {
+        margin: 0;
+    }
+}
 `
 
 const Image = styled.img`
@@ -70,9 +64,7 @@ const Image = styled.img`
         width: 100%;
         min-height: 230px;
         margin-bottom: 20px;
-    }
-
- 
+    } 
 `
 
 const StyledTime = styled.time`
@@ -85,15 +77,15 @@ const StyledTime = styled.time`
     border-radius: 16px;
     padding: 3px;
     padding-left: 11px;
-    margin-right: 28px;
+    margin-right: 22px;
     margin-bottom: 22px;
     
     @media ${theme.media.mobile} {
         font-size: 16px;
         padding: 4px;
         padding-left: 12px;
-    }
-    
+        margin-right: 20px;
+    }    
 `
 
 const StyledSpan = styled.span`

@@ -3,7 +3,7 @@ import {Icon} from "../../components/icon/Icon";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {S} from './Footer_Styles'
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
     return (
             <S.Footer>
                 <FlexWrapper direction={'column'} align={'center'} justify={'center'} height={'100%'}>

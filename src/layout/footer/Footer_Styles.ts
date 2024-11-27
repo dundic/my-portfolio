@@ -6,10 +6,8 @@ const Footer = styled.footer`
     margin-top: 82px;
 
     @media ${theme.media.mobile} {
-        margin-top: 150px;
-        text-align: center;
+        margin-top: 150px;  
     }
-    
 `
 
 const SocialList = styled.ul`
@@ -19,6 +17,7 @@ const SocialList = styled.ul`
 
 const SocialItem = styled.li`
     cursor: pointer;
+
     &:hover {
         opacity: 0.9;
         transform: translateY(-2px);

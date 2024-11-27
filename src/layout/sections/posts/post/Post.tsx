@@ -10,10 +10,10 @@ type PostProps = {
     paragraphText: string
 }
 
-export const Post = (props: PostProps) => {
+export const Post: React.FC<PostProps> = (props) => {
     return (
             <S.Post>
-                <InnerTitle padding={'0 0 30px 0'}>{props.title}</InnerTitle>
+                <InnerTitle padding={'0 0 20px'}>{props.title}</InnerTitle>
                 <S.Timer>{props.data}</S.Timer>
                 <S.SpanElem>{props.spanText}</S.SpanElem>
                 <Paragraph margin={'20px 0 0 0'}>{props.paragraphText}</Paragraph>
