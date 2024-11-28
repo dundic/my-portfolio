@@ -1,12 +1,40 @@
 import React from 'react';
 import {S} from './../HeaderMenu_Styles'
+import {observe} from "web-vitals/dist/modules/lib/observe";
 
-export const Menu: React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
+const items = [
+    {
+        title: "Posts",
+        href: "posts"
+    },
+    {
+        title: "Works",
+        href: "works"
+    },
+    {
+        title: "Contact",
+        href: "contact"
+    },
+   ]
+
+type Props = {
+    isMobile?: boolean
+}
+
+export const Menu: React.FC<Props> = ({isMobile = false}) => {
     return (
             <ul>
-                {props.menuItems.map((item, index) => {
+                {items.map((item, index) => {
                     return <S.MenuItem key={index}>
-                        <S.Link href="">{item}</S.Link>
+                        <S.NavLink
+                                activeClass={"active"}
+                                to={item.href}
+                                smooth={true}
+                                spy={true}
+                                offset={isMobile ? 0 : -84}
+                        >
+                                {item.title}
+                        </S.NavLink>
                     </S.MenuItem>
                 })}
             </ul>

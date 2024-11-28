@@ -8,6 +8,7 @@ import {SectionTitle} from "../../../components/SectionTitle";
 //Posts
 
 const Posts = styled.section`
+    position: relative;
     padding-bottom: 30px;
     background-color: ${theme.colors.secondaryColor};
 
@@ -57,7 +58,7 @@ const Post = styled.article`
         padding-top: 10px;
         padding-left: 20px;
         min-height: 230px;
-        margin-bottom: 0;
+
     
         ${InnerTitle} {
             padding-bottom: 10px;

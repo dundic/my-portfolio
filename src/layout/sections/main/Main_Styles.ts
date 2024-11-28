@@ -8,9 +8,9 @@ const Main = styled.main`
     min-height: 100vh;
     display: flex;
     align-items: center;
+    position: relative;
 
     @media ${theme.media.mobile} {
-
         div {
             text-align: center;
         }
@@ -21,7 +21,7 @@ const Main = styled.main`
 
         ${Paragraph} {
             padding: 10px 15px 30px;
-        }
+        }        
     }
 
     button {
@@ -41,11 +41,14 @@ const Main = styled.main`
 
 const MainTitle = styled.h1`
     ${font({family: 'Heebo Bold, sans-serif', weight: 600, Fmax: 44, Fmin: 32})};
+    
+    p {
+        display: none;
+    }
 
     @media ${theme.media.mobile} {
         margin-bottom: 5px;
     }
-
 `
 
 const Name = styled.span`

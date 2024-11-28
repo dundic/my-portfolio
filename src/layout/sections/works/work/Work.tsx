@@ -28,6 +28,7 @@ export const Work: React.FC<WorkProps> = (props) => {
 };
 
 const StyledWork = styled.article`
+    position: relative;
     border-bottom: 2px solid #E0E0E0;
     display: flex;
     margin-top: 30px;

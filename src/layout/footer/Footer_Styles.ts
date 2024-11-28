@@ -2,11 +2,12 @@ import styled from "styled-components";
 import {theme} from "../../styles/Theme";
 
 const Footer = styled.footer`
+    position: relative;
     height: 182px;
     margin-top: 82px;
 
     @media ${theme.media.mobile} {
-        margin-top: 150px;  
+        margin-top: 150px;
     }
 `
 

@@ -7,14 +7,15 @@ import projectImg3 from './../../../assets/img/proj-3.webp'
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
+import { Fade} from 'react-awesome-reveal'
 
 
 export const Works: React.FC = () => {
     return (
-            <StyledWorks>
+            <StyledWorks id={"works"}>
                 <Container>
-                <SectionTitle margin={'30px 0 0'}>Featured works</SectionTitle>
-
+                <SectionTitle>Featured works</SectionTitle>
+                    <Fade cascade={true} damping={0.2}>
                     <Work src={projectImg1}
                           titleText={'Designing Dashboards'}
                           timeText={'2020'}
@@ -33,18 +34,21 @@ export const Works: React.FC = () => {
                           spanText={'Typography'}
                           paragraphText={'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'}
                     />
-
+                    </Fade>
                 </Container>
             </StyledWorks>
     );
 };
 
 const StyledWorks = styled.section`
+    position: relative;
+    background-color: ${theme.colors.bgColor};
+    padding-top: 30px;
     
     @media ${theme.media.mobile} {
         ${SectionTitle} {
             text-align: center;
-            margin-top: 15px;
+            //margin-top: 15px;
         }
     }
 `
